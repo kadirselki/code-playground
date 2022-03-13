@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="Description" content="Code Playground Example">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<title>Code Playground</title>
+</head>
+
+<body class="preload">
+
+	<main>
+		<header class="main">
+			<p class="title">Code Playground</p>
+			<div class="actions">
+				<select name="history" id="history">
+					<option value="">Select template</option>
+				</select>
+				<button class="save" id="save">Save</button>
+			</div>
+		</header>
+		<section id="content"></section>
+		<div class="editors">
+			<header class="editorsHeader">
+				<button id="expandButton">
+					<i>
+						<svg width="15" height="15">
+							<use href="#expand-icon"></use>
+						</svg>
+					</i>
+					Expand editor on focus
+				</button>
+				<button id="minimizebutton">Minimize</button>
+				<button id="runButton">Run</button>
+			</header>
+			<div class="row">
+				<div class="editorGrid html">
+					<span class="title">HTML5</span>
+					<textarea id="html"><h1>{{HELLO_WORLD}}</h1> <h2>{{ME}}</h2> <p> STATES objesi içerisindeki değişkenleri tanımlayabiliriz. "Run" eventi gerçekleşmeden stateler güncellenmiyor maalesef ve çok sağlıklı çalışmıyor. :( </p> <p>CTRL+S "run" eventini tetiklecektir.</p> <p>"Expand editor on focus" butonu aktifleştirilse editörlerden herhangibi birine focus olduğunda aktif editör genişleyecektir.</p></textarea>
+				</div>
+				<div class="editorGrid css">
+					<span class="title">CSS</span>
+					<textarea
+						id="css">h1{color: {{COLOR}}} body { margin: 0; font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }</textarea>
+				</div>
+				<div class="editorGrid js">
+					<span class="title">JAVASCRIPT</span>
+					<textarea
+						id="js">var STATES = { HELLO_WORLD: 'Welcome to Code Playground', COLOR: 'blue', ME: 'It\'s Kadir' }</textarea>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+
+	<!-- ICONS  -->
+	<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<symbol fill="currentColor" id="expand-icon" viewBox="0 0 490 490">
+				<g>
+					<polygon
+						points="425.8,228.3 354.7,228.3 354.7,261.7 425.8,261.7 386.2,301.4 409.9,325.1 490,245 409.9,164.9 386.2,188.6">
+					</polygon>
+					<polygon
+						points="64.2,261.7 135.3,261.7 135.3,228.3 64.2,228.3 103.8,188.6 80.1,164.9 0,245 80.1,325.1 103.8,301.4">
+					</polygon>
+					<rect x="178.5" width="50.2" height="490"></rect>
+					<rect x="269.5" width="50.2" height="490"></rect>
+				</g>
+			</symbol>
+		</defs>
+	</svg>
+	<script src="assets/js/dist/main.js"></script>
+</body>
+
+</html>
